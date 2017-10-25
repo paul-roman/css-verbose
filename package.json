@@ -1,9 +1,10 @@
 {
   "name": "css-verbose",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A verbose library for smoother CSS-in-JS",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
+    "start": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Paul Roman",
@@ -11,5 +12,11 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/paul-roman/css-verbose.git"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "webpack": "^3.8.1"
   }
 }
