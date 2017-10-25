@@ -1,6 +1,6 @@
 {
   "name": "css-verbose",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A verbose library for smoother CSS-in-JS",
   "main": "index.js",
   "scripts": {
