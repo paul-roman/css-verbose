@@ -1,3 +1,4 @@
+module.exports =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -70,12 +71,97 @@
 "use strict";
 
 
+var unitsFunctions = __webpack_require__(1);
+var colorsFunctions = __webpack_require__(2);
+
+module.exports = Object.assign({}, unitsFunctions, colorsFunctions);
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function cm(n) {
+	return n + "cm";
+}
+
+function mm(n) {
+	return n + "mm";
+}
+
+function inch(n) {
+	return n + "in";
+}
+
+function px(n) {
+	return n + "px";
+}
+
+function pt(n) {
+	return n + "pt";
+}
+
+function pc(n) {
+	return n + "pc";
+}
+
+function em(n) {
+	return n + "em";
+}
+
+function ex(n) {
+	return n + "ex";
+}
+
+function ch(n) {
+	return n + "ch";
+}
+
+function rem(n) {
+	return n + "rem";
+}
+
+function vw(n) {
+	return n + "vw";
+}
+
+function vh(n) {
+	return n + "vh";
+}
+
+function vmin(n) {
+	return n + "vmin";
+}
+
+function vmax(n) {
+	return n + "vmax";
+}
+
+function percents(n) {
+	return n + "%";
+}
+
+module.exports = { cm: cm, mm: mm, inch: inch, px: px, pt: pt, pc: pc, em: em, ex: ex, ch: ch, rem: rem, vw: vw, vh: vh, vmin: vmin, vmax: vmax, percents: percents };
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function rgb(red, green, blue) {
+	return "rgb(" + red + ", " + green + ", " + blue + ")";
+}
+
 function rgba(red, green, blue, alpha) {
 	return "rgba(" + red + ", " + green + ", " + blue + ", " + alpha + ")";
 }
 
 module.exports = {
-	rgba: rgba
+	rgb: rgb, rgba: rgba
 };
 
 /***/ })

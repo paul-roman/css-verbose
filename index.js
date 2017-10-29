@@ -1,7 +1,6 @@
-function rgba(red, green, blue, alpha) {
-	return `rgba(${red}, ${green}, ${blue}, ${alpha})`;
-}
+const unitsFunctions = require('./src/units');
+const colorsFunctions = require('./src/colors');
 
-module.exports = {
-	rgba
-};
+module.exports = Object.assign({},
+	unitsFunctions, colorsFunctions
+);
