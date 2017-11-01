@@ -1,22 +1,30 @@
 declare module 'css-verbose' {
-	/* Units */
-	export function cm(n: number): string;
-	export function mm(n: number): string;
-	export function inch(n: number): string;
-	export function px(n: number): string;
-	export function pt(n: number): string;
-	export function pc(n: number): string;
-	export function em(n: number): string;
-	export function ex(n: number): string;
-	export function ch(n: number): string;
-	export function rem(n: number): string;
-	export function vw(n: number): string;
-	export function vh(n: number): string;
-	export function vmin(n: number): string;
-	export function vmax(n: number): string;
-	export function percents(n: number): string;
-
 	/* Colors */
 	export function rgb(red: string, green: string, blue: string): string;
 	export function rgba(red: string, green: string, blue: string, alpha: string): string;
+
+	/* Padding / Margin */
+	export function __(value1: string | number): string;
+	export function __(value1: string | number, value2: string | number): string;
+	export function __(value1: string | number, value2: string | number, value3: string | number): string;
+	export function __(value1: string | number, value2: string | number, value3: string | number, value4: string | number): string;
+}
+
+interface Number {
+	/* Units */
+	cm(): string;
+	mm(): string;
+	inch(): string;
+	px(): string;
+	pt(): string;
+	pc(): string;
+	em(): string;
+	ex(): string;
+	ch(): string;
+	rem(): string;
+	vw(): string;
+	vh(): string;
+	vMin(): string;
+	vMax(): string;
+	percents(): string;
 }

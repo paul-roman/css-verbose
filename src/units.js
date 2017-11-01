@@ -1,61 +1,58 @@
-function cm(n) {
-	return `${n}cm`;
-}
+Number.prototype.cm = function() {
+	return `${this}cm`;
+};
 
-function mm(n) {
-	return `${n}mm`;
-}
+Number.prototype.mm = function() {
+	return `${this}mm`;
+};
 
-function inch(n) {
-	return `${n}in`;
-}
+Number.prototype.inch = function() {
+	return `${this}in`;
+};
 
-function px(n) {
-	return `${n}px`;
-}
+Number.prototype.px = function() {
+	return `${this}px`;
+};
 
-function pt(n) {
-	return `${n}pt`;
-}
+Number.prototype.pt = function() {
+	return `${this}pt`;
+};
 
-function pc(n) {
-	return `${n}pc`;
-}
+Number.prototype.pc = function() {
+	return `${this}pc`;
+};
 
-function em(n) {
-	return `${n}em`;
-}
+Number.prototype.em = function() {
+	return `${this}em`;
+};
 
-function ex(n) {
-	return `${n}ex`;
-}
+Number.prototype.ex = function() {
+	return `${this}ex`;
+};
+ Number.prototype.ch = function() {
+	return `${this}ch`;
+};
 
-function ch(n) {
-	return `${n}ch`;
-}
+Number.prototype.rem = function() {
+	return `${this}rem`;
+};
 
-function rem(n) {
-	return `${n}rem`;
-}
+Number.prototype.vw = function() {
+	return `${this}vw`;
+};
 
-function vw(n) {
-	return `${n}vw`;
-}
+Number.prototype.vh = function() {
+	return `${this}vh`;
+};
 
-function vh(n) {
-	return `${n}vh`;
-}
+Number.prototype.vMin = function() {
+	return `${this}vmin`;
+};
 
-function vmin(n) {
-	return `${n}vmin`;
-}
+Number.prototype.vMax = function() {
+	return `${this}vmax`;
+};
 
-function vmax(n) {
-	return `${n}vmax`;
-}
-
-function percents(n) {
-	return `${n}%`;
-}
-
-module.exports = { cm, mm, inch, px, pt, pc, em, ex, ch, rem, vw, vh, vmin, vmax, percents };
+Number.prototype.percents = function() {
+	return `${this}%`;
+};

@@ -71,10 +71,11 @@ module.exports =
 "use strict";
 
 
-var unitsFunctions = __webpack_require__(1);
+__webpack_require__(1);
 var colorsFunctions = __webpack_require__(2);
+var marginPaddingFunctions = __webpack_require__(3);
 
-module.exports = Object.assign({}, unitsFunctions, colorsFunctions);
+module.exports = Object.assign({}, colorsFunctions, marginPaddingFunctions);
 
 /***/ }),
 /* 1 */
@@ -83,67 +84,64 @@ module.exports = Object.assign({}, unitsFunctions, colorsFunctions);
 "use strict";
 
 
-function cm(n) {
-	return n + "cm";
-}
+Number.prototype.cm = function () {
+	return this + "cm";
+};
 
-function mm(n) {
-	return n + "mm";
-}
+Number.prototype.mm = function () {
+	return this + "mm";
+};
 
-function inch(n) {
-	return n + "in";
-}
+Number.prototype.inch = function () {
+	return this + "in";
+};
 
-function px(n) {
-	return n + "px";
-}
+Number.prototype.px = function () {
+	return this + "px";
+};
 
-function pt(n) {
-	return n + "pt";
-}
+Number.prototype.pt = function () {
+	return this + "pt";
+};
 
-function pc(n) {
-	return n + "pc";
-}
+Number.prototype.pc = function () {
+	return this + "pc";
+};
 
-function em(n) {
-	return n + "em";
-}
+Number.prototype.em = function () {
+	return this + "em";
+};
 
-function ex(n) {
-	return n + "ex";
-}
+Number.prototype.ex = function () {
+	return this + "ex";
+};
+Number.prototype.ch = function () {
+	return this + "ch";
+};
 
-function ch(n) {
-	return n + "ch";
-}
+Number.prototype.rem = function () {
+	return this + "rem";
+};
 
-function rem(n) {
-	return n + "rem";
-}
+Number.prototype.vw = function () {
+	return this + "vw";
+};
 
-function vw(n) {
-	return n + "vw";
-}
+Number.prototype.vh = function () {
+	return this + "vh";
+};
 
-function vh(n) {
-	return n + "vh";
-}
+Number.prototype.vMin = function () {
+	return this + "vmin";
+};
 
-function vmin(n) {
-	return n + "vmin";
-}
+Number.prototype.vMax = function () {
+	return this + "vmax";
+};
 
-function vmax(n) {
-	return n + "vmax";
-}
-
-function percents(n) {
-	return n + "%";
-}
-
-module.exports = { cm: cm, mm: mm, inch: inch, px: px, pt: pt, pc: pc, em: em, ex: ex, ch: ch, rem: rem, vw: vw, vh: vh, vmin: vmin, vmax: vmax, percents: percents };
+Number.prototype.percents = function () {
+	return this + "%";
+};
 
 /***/ }),
 /* 2 */
@@ -162,6 +160,27 @@ function rgba(red, green, blue, alpha) {
 
 module.exports = {
 	rgb: rgb, rgba: rgba
+};
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function toPx(value) {
+	if (typeof value === 'string') {
+		if (/^\d+$/.test(value)) return value + 'px';else return value;
+	} else return value + 'px';
+}
+
+function __(a, b, c, d) {
+	if (b === undefined) return toPx(a);else if (c === undefined) return toPx(a) + ' ' + toPx(b);else if (d === undefined) return toPx(a) + ' ' + toPx(b) + ' ' + toPx(c);else return toPx(a) + ' ' + toPx(b) + ' ' + toPx(c) + ' ' + toPx(d);
+}
+
+module.exports = {
+	__: __
 };
 
 /***/ })
