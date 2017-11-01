@@ -1,4 +1,4 @@
-declare module 'css-verbose' {
+declare module CssVerbose {
 	/* Colors */
 	export function rgb(red: string, green: string, blue: string): string;
 	export function rgba(red: string, green: string, blue: string, alpha: string): string;
@@ -28,3 +28,5 @@ interface Number {
 	vMax(): string;
 	percents(): string;
 }
+
+export = CssVerbose;
