@@ -1,4 +1,6 @@
-##CSS Verbose
+## CSS Verbose
+[![npm](https://img.shields.io/npm/dt/css-verbose.svg?style=flat-square)]()
+
 This library is for users of CSS-in-JS (pure React, Radium, Aphrodite or whatever).
 
 It provides an API close to real CSS for a more meaningful approach of CSS-in-JS.
