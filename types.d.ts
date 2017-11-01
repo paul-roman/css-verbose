@@ -1,13 +1,13 @@
-declare module CssVerbose {
+interface CssVerbose {
 	/* Colors */
-	export function rgb(red: string, green: string, blue: string): string;
-	export function rgba(red: string, green: string, blue: string, alpha: string): string;
+	rgb(red: number, green: number, blue: number): string;
+	rgba(red: number, green: number, blue: number, alpha: string): string;
 
 	/* Padding / Margin */
-	export function __(value1: string | number): string;
-	export function __(value1: string | number, value2: string | number): string;
-	export function __(value1: string | number, value2: string | number, value3: string | number): string;
-	export function __(value1: string | number, value2: string | number, value3: string | number, value4: string | number): string;
+	__(value1: string | number): string;
+	__(value1: string | number, value2: string | number): string;
+	__(value1: string | number, value2: string | number, value3: string | number): string;
+	__(value1: string | number, value2: string | number, value3: string | number, value4: string | number): string;
 }
 
 interface Number {
@@ -29,4 +29,3 @@ interface Number {
 	percents(): string;
 }
 
-export = CssVerbose;

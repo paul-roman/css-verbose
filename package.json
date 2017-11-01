@@ -1,6 +1,6 @@
 {
   "name": "css-verbose",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "A verbose library for smoother CSS-in-JS",
   "main": "./dist/index.js",
   "scripts": {
@@ -9,6 +9,7 @@
   },
   "author": "Paul Roman",
   "license": "MIT",
+  "types": "./types.d.ts",
   "repository": {
     "type": "git",
     "url": "git://github.com/paul-roman/css-verbose.git"
