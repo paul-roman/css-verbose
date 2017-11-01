@@ -1,5 +1,5 @@
 ## CSS Verbose
-[![npm](https://img.shields.io/npm/dt/css-verbose.svg?style=flat-square)]()
+[![https://www.npmjs.com/package/css-verbose](https://img.shields.io/npm/dt/css-verbose.svg?style=flat-square)]()
 
 This library is for users of CSS-in-JS (pure React, Radium, Aphrodite or whatever).
 
