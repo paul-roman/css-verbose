@@ -1,14 +1,13 @@
-interface CssVerbose {
-	/* Colors */
-	rgb(red: number, green: number, blue: number): string;
-	rgba(red: number, green: number, blue: number, alpha: string): string;
+/* Colors */
+export function rgb(red: number, green: number, blue: number): string;
+export function rgba(red: number, green: number, blue: number, alpha: number): string;
 
-	/* Padding / Margin */
-	__(value1: string | number): string;
-	__(value1: string | number, value2: string | number): string;
-	__(value1: string | number, value2: string | number, value3: string | number): string;
-	__(value1: string | number, value2: string | number, value3: string | number, value4: string | number): string;
-}
+/* Padding / Margin */
+export function __(value1: string | number): string;
+export function __(value1: string | number, value2: string | number): string;
+export function __(value1: string | number, value2: string | number, value3: string | number): string;
+export function __(value1: string | number, value2: string | number, value3: string | number, value4: string | number): string;
+
 
 interface Number {
 	/* Units */
@@ -28,4 +27,3 @@ interface Number {
 	vMax(): string;
 	percents(): string;
 }
-
