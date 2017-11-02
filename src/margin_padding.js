@@ -1,13 +1,4 @@
-function toPx(value) {
-	if (typeof value === 'string') {
-		if (/^\d+$/.test(value))
-			return `${value}px`;
-		else
-			return value;
-	}
-	else
-		return `${value}px`;
-}
+const toPx = require('./toPx').toPx;
 
 function __(a, b, c, d) {
 	if (b === undefined)
@@ -20,6 +11,11 @@ function __(a, b, c, d) {
 		return `${toPx(a)} ${toPx(b)} ${toPx(c)} ${toPx(d)}`;
 }
 
+function padding(a, b, c, d) { return __(a, b, c, d); }
+function margin(a, b, c, d) { return __(a, b, c, d); }
+
 module.exports = {
-	__
+	__,
+	margin,
+	padding
 };

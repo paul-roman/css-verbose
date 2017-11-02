@@ -1,5 +1,6 @@
 ## CSS Verbose
-[![https://www.npmjs.com/package/css-verbose](https://img.shields.io/npm/dt/css-verbose.svg?style=flat-square)]()
+[![license](https://img.shields.io/github/license/paul-roman/css-verbose.svg?style=flat-square)](https://github.com/paul-roman/css-verbose/blob/master/LICENSE.md)
+[![npm](https://img.shields.io/npm/dt/css-verbose.svg?style=flat-square)](https://www.npmjs.com/package/css-verbose)
 
 This library is for users of CSS-in-JS (pure React, Radium, Aphrodite or whatever).
 
@@ -52,7 +53,7 @@ _CSS:_
 ```
 
 _JS:_
-```css
+```js
 {
 	width: (100).px(),
 	height: (10).em(),
@@ -73,15 +74,14 @@ _CSS:_
 ```
 
 _JS:_
-```css
+```js
 {
 	backgroundColor: rgb(150, 34, 78),
 	color: rgba(70, 45, 12, 0.4)
 }
 ```
-
 #### Margin / Padding
-A quite helper **__()** is provided to handle margin and padding. It will automatically convert standard numbers to pixels: 
+Two helpers **margin()** and **padding()** are provided to handle margin and padding, which both act the same. They will automatically convert standard numbers to pixels: 
 
 _CSS:_
 ```css
@@ -92,9 +92,25 @@ _CSS:_
 ```
 
 _JS:_
+```js
+{
+	margin: margin(10, 40, (1).percents(), (6).em()),
+	padding: padding(50, 3)
+}
+```
+#### Borders
+A **border()** helper is provided to handle borders. The style parameter is mandatory. If you only provide 2 parameters, it will assume that they are the width and the style. It will automatically convert standard numbers to pixels:  
+
+_CSS:_
 ```css
 {
-	margin: __(10, 40, (1).percents(), (6).em()),
-	padding: __(50, 3)
+	border: 3px solid rgb(0, 230, 54);
+}
+```
+
+_JS:_
+```js
+{
+	border: border(3, 'solid', rgb(0, 230, 54))
 }
 ```
