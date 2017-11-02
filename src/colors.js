@@ -36,7 +36,7 @@ class Color {
 }
 
 function color(red, green, blue, alpha) {
-	return new Color(red, green, blue, alpha);
+	return `${new Color(red, green, blue, alpha)}`;
 }
 
 function rgb(red, green, blue) {

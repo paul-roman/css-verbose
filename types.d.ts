@@ -1,20 +1,22 @@
 /* Units */
-interface Number {
-	cm(): string;
-	mm(): string;
-	inch(): string;
-	px(): string;
-	pt(): string;
-	pc(): string;
-	em(): string;
-	ex(): string;
-	ch(): string;
-	rem(): string;
-	vw(): string;
-	vh(): string;
-	vMin(): string;
-	vMax(): string;
-	percents(): string;
+declare module 'css-verbose' {
+	interface Number {
+		cm(): string;
+		mm(): string;
+		inch(): string;
+		px(): string;
+		pt(): string;
+		pc(): string;
+		em(): string;
+		ex(): string;
+		ch(): string;
+		rem(): string;
+		vw(): string;
+		vh(): string;
+		vMin(): string;
+		vMax(): string;
+		percents(): string;
+	}
 }
 
 /* Colors */
