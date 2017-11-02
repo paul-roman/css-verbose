@@ -18,7 +18,7 @@ class Color {
 			this.red = red;
 			this.green = green;
 			this.blue = blue;
-			if (alpha)
+			if (alpha !== undefined)
 				this.alpha = alpha;
 		}
 	}
